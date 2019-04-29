@@ -9,7 +9,13 @@
   <body>
 
     <div id="app">
-
+      <ul>
+        <li v-for="item in items">
+          <span>{{item}}</span>
+        </li>
+      </ul>
+      <input type="text" v-model="newTodo">
+      <button @click="saveNewTodo">Save Todo</button>
     </div>
 
   </body>
