@@ -10,9 +10,8 @@
 
     <div id="app">
       <ul>
-        <li v-for="item in items">
+        <li v-for="item in items" :class="item.priority=='Low' ? 'low' : 'high'">
           <span>{{item.name}}</span>
-          <span>{{item.priority}}</span>
         </li>
       </ul>
       <input type="text" v-model="newTodo">
